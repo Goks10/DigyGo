@@ -3,6 +3,8 @@ import { Inter, Roboto_Mono } from "next/font/google"; // Changed from Geist to 
 
 import ParticleBackground from "@/components/visuals/ParticleBackground";
 import PageTransition from "@/components/layout/PageTransition";
+import Navbar from "@/components/layout/Navbar";
+import Footer from "@/components/layout/Footer";
 import "./globals.css";
 
 const inter = Inter({
@@ -34,9 +36,11 @@ export default function RootLayout({
         className={`${inter.variable} ${robotoMono.variable} antialiased relative`}
       >
         <ParticleBackground />
+        <Navbar />
         <PageTransition>
           {children}
         </PageTransition>
+        <Footer />
       </body>
     </html>
   );
